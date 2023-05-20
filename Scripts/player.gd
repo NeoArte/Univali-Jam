@@ -19,6 +19,12 @@ var direction = Vector2(0, 0)
 
 func _init():
 	pass
+	
+func add_level():
+	level += 1 if level <= 3 else 0
+
+func remove_level():
+	level -= 1 if level >= 1 else 0
 
 func _physics_process(delta):
 	match state:
@@ -27,4 +33,4 @@ func _physics_process(delta):
 		2:
 			states_nodes['2'].run(self, delta)
 		3:
-			states_nodes['3'].run(self, delta)
+			states_nodes['3'].run()

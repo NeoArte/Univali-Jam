@@ -5,17 +5,14 @@
 [ext_resource type="Script" path="res://Scripts/states/Moving.gd" id="2_oaciu"]
 [ext_resource type="Script" path="res://Scripts/states/Dying.gd" id="4_olyv1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6jwn"]
-size = Vector2(320, 320)
-
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_hcl6t"]
-size = Vector2(320, 320)
+size = Vector2(256, 256)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6jwn"]
+size = Vector2(200, 128)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_p4mf4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_x6jwn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("PlaceholderTexture2D_hcl6t")
@@ -30,6 +27,11 @@ script = ExtResource("2_i7wi0")
 
 [node name="Dying" type="Node" parent="States"]
 script = ExtResource("4_olyv1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 64)
+scale = Vector2(0.719998, 1)
+shape = SubResource("RectangleShape2D_x6jwn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
