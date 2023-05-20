@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://boj2ke5y667io"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_p4mf4"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_p4mf4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Levels" type="Node" parent="."]
+
+[node name="Level1" type="Node" parent="Levels"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Levels/Level1"]
+
+[node name="Level2" type="Node" parent="Levels"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Levels/Level2"]
+
+[node name="Level3" type="Node" parent="Levels"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Levels/Level3"]
+
+[node name="States" type="Node" parent="."]
+
+[node name="Node" type="Node" parent="States"]
