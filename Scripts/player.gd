@@ -4,7 +4,7 @@ class_name Player
 const SPEED = 300.0
 
 @export var state = 1
-@export var level = 1
+@export var level = 3
 var direction = Vector2(0, 0)
 
 @onready var idle = get_node('States/Idle')
@@ -16,6 +16,9 @@ var direction = Vector2(0, 0)
 	'2': moving,
 	'3': dying,
 }
+
+@onready var startup_anim_player = get_node('StartupAnimationPlayer')
+@onready var anim_player = get_node('AnimationPlayer')
 
 func _init():
 	pass
