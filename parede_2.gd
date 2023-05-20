@@ -13,5 +13,5 @@ func _process(delta):
 
 func _on_body_entered(body: Player):
 	if body.level != nivel_req:
-		body.state = 1
+		body.state
 	
