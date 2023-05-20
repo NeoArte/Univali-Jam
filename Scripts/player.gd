@@ -1,25 +1,27 @@
 extends CharacterBody2D
-
+class_name Player
 
 const SPEED = 300.0
 
-var collision_shape = get_node("States")
-var levels = {
-	1: get_node("Levels/Level1"),
-	2: get_node("Levels/Level2"),
-	3: get_node("Levels/Level3"),
+@export var state = 1
+var direction = Vector2(0, 0)
+
+@onready var idle = get_node('States/Idle')
+@onready var moving = get_node('States/Moving')
+
+@onready var states_nodes = {
+	'1': idle,
+	'2': moving
 }
 
 func _init():
-	collision_shape.set_shape()
+	pass
 
 func _physics_process(delta):
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	move_and_slide()
+	match state:
+		1:
+			direction = states_nodes['1'].run()
+			if direction != Vector2(0,0):
+				state = 2
+		2:
+			var direction = states_nodes['2'].run(self, delta)

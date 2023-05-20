@@ -1,17 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://boj2ke5y667io"]
+[gd_scene load_steps=6 format=3 uid="uid://boj2ke5y667io"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_p4mf4"]
+[ext_resource type="Script" path="res://Scripts/states/Idle.gd" id="2_i7wi0"]
+[ext_resource type="Script" path="res://Scripts/states/Moving.gd" id="2_oaciu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6jwn"]
+size = Vector2(320, 320)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_hcl6t"]
+size = Vector2(320, 320)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_p4mf4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_x6jwn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_hcl6t")
 
 [node name="Levels" type="Node" parent="."]
 
 [node name="Level1" type="Node" parent="Levels"]
-
-[node name="Sprite2D" type="Sprite2D" parent="Levels/Level1"]
 
 [node name="Level2" type="Node" parent="Levels"]
 
@@ -23,4 +33,8 @@ script = ExtResource("1_p4mf4")
 
 [node name="States" type="Node" parent="."]
 
-[node name="Node" type="Node" parent="States"]
+[node name="Moving" type="Node" parent="States"]
+script = ExtResource("2_oaciu")
+
+[node name="Idle" type="Node" parent="States"]
+script = ExtResource("2_i7wi0")
