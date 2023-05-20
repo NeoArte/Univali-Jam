@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch1h2it7i6ueu"]
+
+[ext_resource type="Texture2D" uid="uid://cv5wj5de2bacw" path="res://Sprites/neve II.png" id="1_84fug"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkxpi"]
+size = Vector2(256, 160)
+
+[node name="snow_tile" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_84fug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -48)
+shape = SubResource("RectangleShape2D_dkxpi")
