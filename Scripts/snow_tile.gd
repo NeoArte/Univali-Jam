@@ -6,6 +6,6 @@ func _ready():
 	pass # Replace with function body.
 
 
-func _on_body_entered(body: Player):
+func _on_body_entered(body: PlayerClass):
 	body.add_level()
 	

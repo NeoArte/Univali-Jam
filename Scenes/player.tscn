@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://boj2ke5y667io"]
+[gd_scene load_steps=30 format=3 uid="uid://boj2ke5y667io"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_p4mf4"]
 [ext_resource type="Script" path="res://Scripts/states/Idle.gd" id="2_i7wi0"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://2vhvmm3a54p3" path="res://Sprites/frosty_1_walking_left.png" id="10_qv0yg"]
 [ext_resource type="Texture2D" uid="uid://caaurjyrj58ee" path="res://Sprites/frosty_1_walking_down.png" id="11_lhwni"]
 [ext_resource type="Texture2D" uid="uid://daubuohriaxrf" path="res://Sprites/frosty_3_walking_up.png" id="12_x2y8t"]
+[ext_resource type="AudioStream" uid="uid://dr2wtoc1r03g6" path="res://Audio/mixkit-body-punch-quick-hit-2153.wav" id="14_d23ml"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6jwn"]
 size = Vector2(200, 128)
@@ -706,3 +707,6 @@ libraries = {
 "Level2": ExtResource("7_c2euq"),
 "Level3": ExtResource("6_8vi24")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_d23ml")

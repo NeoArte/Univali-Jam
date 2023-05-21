@@ -8,16 +8,6 @@
 
 config_version=5
 
-_global_script_classes=[{
-"base": "CharacterBody2D",
-"class": &"PlayerClass",
-"language": &"GDScript",
-"path": "res://Scripts/player.gd"
-}]
-_global_script_class_icons={
-"PlayerClass": ""
-}
-
 [application]
 
 config/name="Univali Jam"
