@@ -6,10 +6,9 @@ func _ready():
 	pass # Replace with function body.
 
 
-func _on_body_entered(body: Player):
+func _on_body_entered(body: PlayerClass):
 	body.add_level()
 
 
-func _on_ChangeScene_body_entered(body: Player):
-
-	get_tree().change_scene("res://teste.tscn")
+func _on_Area2D_body_entered(body: PlayerClass):
+	get_tree().change_scene("<LevelBase>")
