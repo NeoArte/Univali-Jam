@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt1byrockbr55"]
+
+[ext_resource type="Texture2D" uid="uid://c5e13leh6q8u3" path="res://Sprites/iglu (1).png" id="1_odewo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3ja3"]
+size = Vector2(512, 317)
+
+[node name="igloo" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_odewo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 97.5)
+shape = SubResource("RectangleShape2D_a3ja3")

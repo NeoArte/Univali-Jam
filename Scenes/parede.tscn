@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2g3alcyiu0r1"]
-
-[ext_resource type="Texture2D" path="res://Untitled 05-20-2023 12-21-26 (2).png" id="1_01ypj"]
+[gd_scene load_steps=2 format=3 uid="uid://c2g3alcyiu0r1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bkt2f"]
 size = Vector2(320, 320)
@@ -13,4 +11,3 @@ shape = SubResource("RectangleShape2D_bkt2f")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-0.500005, -0.500005)
 scale = Vector2(1.24609, 1.24609)
-texture = ExtResource("1_01ypj")
