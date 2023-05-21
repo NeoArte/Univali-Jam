@@ -43,12 +43,12 @@ autoplay = true
 
 [node name="igloo" parent="." instance=ExtResource("4_3ifmx")]
 position = Vector2(1797, -1175)
-next_level_path = "res://Scenes/Levels/Level1.tscn"
+next_level_path = "res://Screens/main_screen.tscn"
 
 [connection signal="body_entered" from="BackgroundTileMap/GrassTile" to="BackgroundTileMap/GrassTile" method="_on_body_entered"]
 [connection signal="body_exited" from="BackgroundTileMap/GrassTile" to="BackgroundTileMap/GrassTile" method="_on_body_exited"]
 [connection signal="body_entered" from="BackgroundTileMap/snow_tile" to="BackgroundTileMap/snow_tile" method="_on_body_entered"]
-[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@75145" to="BackgroundTileMap/@GrassTile@75145" method="_on_body_entered"]
-[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@75145" to="BackgroundTileMap/@GrassTile@75145" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@58185" to="BackgroundTileMap/@GrassTile@58185" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@58185" to="BackgroundTileMap/@GrassTile@58185" method="_on_body_exited"]
 [connection signal="body_entered" from="ObjectsTileMap/SizedWall" to="ObjectsTileMap/SizedWall" method="_on_body_entered"]
-[connection signal="body_entered" from="ObjectsTileMap/@SizedWall@74652" to="ObjectsTileMap/@SizedWall@74652" method="_on_body_entered"]
+[connection signal="body_entered" from="ObjectsTileMap/@SizedWall@58175" to="ObjectsTileMap/@SizedWall@58175" method="_on_body_entered"]

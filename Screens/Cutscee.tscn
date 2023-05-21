@@ -1,0 +1,114 @@
+[gd_scene load_steps=8 format=3 uid="uid://rxpr6cdjueha"]
+
+[ext_resource type="Script" path="res://Screens/Cutscee.gd" id="1_41hlv"]
+[ext_resource type="Texture2D" uid="uid://ctfme1id1kipu" path="res://Art/geloko frame 1 - emporte.png" id="1_oyv2u"]
+[ext_resource type="Texture2D" uid="uid://cj7wckl4rtxkc" path="res://Art/geloko frame 2 - esporte.png" id="2_5cq5n"]
+[ext_resource type="Texture2D" uid="uid://cw8u0nhs2xofe" path="res://Art/geloko frame 3 - excavadora.png" id="3_nxyvn"]
+
+[sub_resource type="Animation" id="Animation_nrjp5"]
+resource_name = "Cutscene"
+length = 16.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.1, 7.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_oyv2u"), ExtResource("2_5cq5n"), ExtResource("3_nxyvn")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5, 3.1, 3.5, 6.5, 7.1, 7.5, 13.4, 13.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(16),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"next_scene"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_0xg10"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_oyv2u")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_26ml3"]
+_data = {
+"Cutscene": SubResource("Animation_nrjp5"),
+"RESET": SubResource("Animation_0xg10")
+}
+
+[node name="Cutscee" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_41hlv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_oyv2u")
+ignore_texture_size = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_26ml3")
+}
