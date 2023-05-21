@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0h88knnel0ac"]
+
+[ext_resource type="Script" path="res://parede_2.gd" id="1_6b0fq"]
+[ext_resource type="Texture2D" uid="uid://bfijxqtxp5gsx" path="res://Untitled 05-20-2023 12-21-26 (2).png" id="2_ffbcn"]
+[ext_resource type="Texture2D" uid="uid://dk7m3n11g7qlq" path="res://Sprites/apoio_madeira_ponta.png" id="3_b3ueu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q75x8"]
+size = Vector2(254, 286)
+
+[node name="SizedWall" type="Area2D"]
+position = Vector2(0, -95)
+script = ExtResource("1_6b0fq")
+nivel_req = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -17)
+shape = SubResource("RectangleShape2D_q75x8")
+
+[node name="SpriteTarget1" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteTarget1"]
+texture = ExtResource("3_b3ueu")
+
+[node name="Sprite2D2" type="Sprite2D" parent="SpriteTarget1"]
+modulate = Color(0.686275, 0.72549, 0.721569, 1)
+position = Vector2(0, -81)
+texture = ExtResource("2_ffbcn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

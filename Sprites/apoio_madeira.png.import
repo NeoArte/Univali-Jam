@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv5wj5de2bacw"
-path="res://.godot/imported/neve II.png-d1acc65f2bb23c8bc0d1a8b482c9e0f8.ctex"
+uid="uid://o1si40q70mir"
+path="res://.godot/imported/apoio_madeira.png-6f8ab36078ed822279aa5c491c599193.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/neve II.png"
-dest_files=["res://.godot/imported/neve II.png-d1acc65f2bb23c8bc0d1a8b482c9e0f8.ctex"]
+source_file="res://Sprites/apoio_madeira.png"
+dest_files=["res://.godot/imported/apoio_madeira.png-6f8ab36078ed822279aa5c491c599193.ctex"]
 
 [params]
 

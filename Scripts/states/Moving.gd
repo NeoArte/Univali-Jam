@@ -5,9 +5,12 @@ extends Node
 func _ready():
 	pass # Replace with function body.
 
-func run(player: Player, delta: float):
-	var motion = player.direction * 100 * delta
-	var col_info = player.move_and_collide(motion)
-	print(col_info, player.position)
+func run(player: PlayerClass, delta: float):
+	var motion = player.direction * 400 * delta
+	var col_info = player.move_and_collide(motion * 3, true)
+	print(col_info)
 	if col_info:
+		player.direction = Vector2.ZERO
 		player.state = 1
+		return
+	player.move_and_collide(motion)

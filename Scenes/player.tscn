@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://boj2ke5y667io"]
+[gd_scene load_steps=27 format=3 uid="uid://boj2ke5y667io"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_p4mf4"]
 [ext_resource type="Script" path="res://Scripts/states/Idle.gd" id="2_i7wi0"]
@@ -16,7 +16,25 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6jwn"]
 size = Vector2(200, 128)
 
+[sub_resource type="Animation" id="Animation_xxnax"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_oufo7")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_e3sy3"]
+_data = {
+"RESET": SubResource("Animation_xxnax")
+}
 
 [sub_resource type="Animation" id="Animation_shcqt"]
 resource_name = "Idle"
@@ -541,12 +559,14 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(0, -64)
 script = ExtResource("1_p4mf4")
-level = 1
+level = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -32)
-texture = ExtResource("9_ks6qk")
+position = Vector2(0, -97)
+scale = Vector2(-1, 1)
+texture = ExtResource("2_oufo7")
 hframes = 5
 
 [node name="States" type="Node" parent="."]
@@ -570,6 +590,7 @@ current = true
 zoom = Vector2(0.4, 0.4)
 
 [node name="StartupAnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Level3/Idle"
 libraries = {
 "": SubResource("AnimationLibrary_e3sy3"),
 "Level1": ExtResource("6_b0dm8"),
@@ -578,6 +599,7 @@ libraries = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Level3/Idle"
 libraries = {
 "": SubResource("AnimationLibrary_e3sy3"),
 "Level1": SubResource("AnimationLibrary_lxb7l"),

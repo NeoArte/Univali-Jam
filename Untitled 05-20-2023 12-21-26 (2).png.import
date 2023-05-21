@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv5wj5de2bacw"
-path="res://.godot/imported/neve II.png-d1acc65f2bb23c8bc0d1a8b482c9e0f8.ctex"
+uid="uid://bfijxqtxp5gsx"
+path="res://.godot/imported/Untitled 05-20-2023 12-21-26 (2).png-f59b40191a794ce23b1360b5b0aa2a4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/neve II.png"
-dest_files=["res://.godot/imported/neve II.png-d1acc65f2bb23c8bc0d1a8b482c9e0f8.ctex"]
+source_file="res://Untitled 05-20-2023 12-21-26 (2).png"
+dest_files=["res://.godot/imported/Untitled 05-20-2023 12-21-26 (2).png-f59b40191a794ce23b1360b5b0aa2a4a.ctex"]
 
 [params]
 
