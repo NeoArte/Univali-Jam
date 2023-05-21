@@ -21,7 +21,7 @@ position = Vector2(0, -1)
 tile_set = ExtResource("1_of2b2")
 format = 2
 layer_0/y_sort_enabled = true
-layer_0/tile_data = PackedInt32Array(65532, 1, 131072, -262148, 3, 65536, -262142, 3, 65536, 5, 3, 65536, -327676, 3, 65536, 65536, 3, 65536, 327672, 3, 65536, 393217, 3, 65536, 196609, 3, 65536, 524283, 3, 65536, 458753, 3, 65536, -262143, 3, 65536, -65544, 3, 65536, -65541, 3, 65536)
+layer_0/tile_data = PackedInt32Array(65532, 1, 131072, -262142, 3, 65536, 5, 3, 65536, -327676, 3, 65536, 65536, 3, 65536, 327672, 3, 65536, 393217, 3, 65536, 196609, 3, 65536, 524283, 3, 65536, 458753, 3, 65536, -262143, 3, 65536, -65544, 3, 65536, 65535, 3, 65536, -262148, 3, 65536)
 
 [node name="LimitsTileMap" type="TileMap" parent="."]
 position = Vector2(0, 9)
@@ -48,4 +48,4 @@ autoplay = true
 
 [connection signal="body_entered" from="BackgroundTileMap/GrassTile" to="BackgroundTileMap/GrassTile" method="_on_body_entered"]
 [connection signal="body_exited" from="BackgroundTileMap/GrassTile" to="BackgroundTileMap/GrassTile" method="_on_body_exited"]
-[connection signal="body_entered" from="ObjectsTileMap/SizedWall" to="ObjectsTileMap/SizedWall" method="_on_body_entered"]
+[connection signal="body_entered" from="ObjectsTileMap/@SizedWall@44800" to="ObjectsTileMap/@SizedWall@44800" method="_on_body_entered"]
