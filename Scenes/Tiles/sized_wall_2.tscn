@@ -6,15 +6,17 @@
 [ext_resource type="Texture2D" uid="uid://o1si40q70mir" path="res://Sprites/apoio_madeira.png" id="4_erqgq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q75x8"]
-size = Vector2(254, 320)
+size = Vector2(254, 200)
 
 [node name="SizedWall" type="Area2D"]
 modulate = Color(0.686275, 0.72549, 0.721569, 1)
 position = Vector2(0, -187)
+z_index = 1
 script = ExtResource("1_4smqu")
 nivel_req = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 84)
 shape = SubResource("RectangleShape2D_q75x8")
 
 [node name="SpriteTarget2" type="Node2D" parent="."]
