@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6aejy48wnmoq"
-path="res://.godot/imported/frosty_2_walking_left.png-f377921de7393b75a08ede8acd9bbed1.ctex"
+uid="uid://c5e13leh6q8u3"
+path="res://.godot/imported/iglu (1).png-52763c62b6f7fbc3de4130226df2abfc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/frosty_2_walking_left.png"
-dest_files=["res://.godot/imported/frosty_2_walking_left.png-f377921de7393b75a08ede8acd9bbed1.ctex"]
+source_file="res://Sprites/iglu (1).png"
+dest_files=["res://.godot/imported/iglu (1).png-52763c62b6f7fbc3de4130226df2abfc.ctex"]
 
 [params]
 

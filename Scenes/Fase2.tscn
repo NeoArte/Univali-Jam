@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b07h65k4iybna"]
+
+[ext_resource type="PackedScene" uid="uid://boj2ke5y667io" path="res://Scenes/player.tscn" id="2_r3388"]
+[ext_resource type="PackedScene" uid="uid://bt1byrockbr55" path="res://Scenes/Tiles/igloo_tile.tscn" id="3_32v07"]
+[ext_resource type="Script" path="res://Scenes/Area2D.gd" id="3_mixth"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2djf"]
+size = Vector2(269, 308.5)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player2" parent="." instance=ExtResource("2_r3388")]
+position = Vector2(-53, 153)
+
+[node name="igloo_tile" parent="." instance=ExtResource("3_32v07")]
+position = Vector2(849, 70)
+disable_mode = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_mixth")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(314, 282)
+shape = SubResource("RectangleShape2D_x2djf")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
