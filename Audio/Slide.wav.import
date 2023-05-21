@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://nmyb760da6hr"
-path="res://.godot/imported/mixkit-glass-plate-slide-1527.wav-8e55602cc31a1f43c964459063548e59.sample"
+path="res://.godot/imported/Slide.wav-bdc9d22c0da98d9d1e83a4f7864266c1.sample"
 
 [deps]
 
-source_file="res://Audio/mixkit-glass-plate-slide-1527.wav"
-dest_files=["res://.godot/imported/mixkit-glass-plate-slide-1527.wav-8e55602cc31a1f43c964459063548e59.sample"]
+source_file="res://Audio/Slide.wav"
+dest_files=["res://.godot/imported/Slide.wav-bdc9d22c0da98d9d1e83a4f7864266c1.sample"]
 
 [params]
 

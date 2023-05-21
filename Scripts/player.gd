@@ -10,7 +10,7 @@ var direction = Vector2(0, 0)
 @onready var idle = get_node('States/Idle')
 @onready var moving = get_node('States/Moving')
 @onready var dying = get_node('States/Dying')
-
+@onready var audio = get_node('AudioStreamPlayer2D')
 @onready var states_nodes = {
 	'1': idle,
 	'2': moving,
@@ -22,7 +22,6 @@ var direction = Vector2(0, 0)
 
 func _init():
 	pass
-	
 func add_level():
 	level += 1 if level <= 3 else 0
 
@@ -39,3 +38,6 @@ func _physics_process(delta):
 			states_nodes['2'].run(self, delta)
 		3:
 			states_nodes['3'].run()
+	
+
+
