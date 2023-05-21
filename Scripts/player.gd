@@ -47,7 +47,7 @@ func _physics_process(delta):
 		2:
 			states_nodes['2'].run(self, delta)
 		3:
-			states_nodes['3'].run()
+			states_nodes['3'].run(self)
 	
 
 

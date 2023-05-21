@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcfje6yn10hdr"
-path="res://.godot/imported/Geloko Numa Fria Main Screen.png-9eb1e940ad99fd701667a80a5af9fdbb.ctex"
+uid="uid://di1kvnvhtld3o"
+path="res://.godot/imported/FROSTY MORREU.png-55a96dc02150b4f7b2e32b33b076ec75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Geloko Numa Fria Main Screen.png"
-dest_files=["res://.godot/imported/Geloko Numa Fria Main Screen.png-9eb1e940ad99fd701667a80a5af9fdbb.ctex"]
+source_file="res://Sprites/FROSTY MORREU.png"
+dest_files=["res://.godot/imported/FROSTY MORREU.png-55a96dc02150b4f7b2e32b33b076ec75.ctex"]
 
 [params]
 

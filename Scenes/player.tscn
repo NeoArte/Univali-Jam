@@ -1,10 +1,11 @@
-[gd_scene load_steps=31 format=3 uid="uid://boj2ke5y667io"]
+[gd_scene load_steps=33 format=3 uid="uid://03xwa6ptemke"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_p4mf4"]
 [ext_resource type="Script" path="res://Scripts/states/Idle.gd" id="2_i7wi0"]
 [ext_resource type="Script" path="res://Scripts/states/Moving.gd" id="2_oaciu"]
 [ext_resource type="Texture2D" uid="uid://boyyq4nenkkx7" path="res://Sprites/frosty_3_startup_left.png" id="2_oufo7"]
 [ext_resource type="Script" path="res://Scripts/states/Dying.gd" id="4_olyv1"]
+[ext_resource type="PackedScene" uid="uid://cywefjsblli8s" path="res://morreu.tscn" id="6_6qx1h"]
 [ext_resource type="AnimationLibrary" uid="uid://bf6irvi5fcw12" path="res://Animations/Level3.res" id="6_8vi24"]
 [ext_resource type="AnimationLibrary" uid="uid://22pw2jynf5j8" path="res://Animations/Level1.res" id="6_b0dm8"]
 [ext_resource type="Texture2D" uid="uid://b6aejy48wnmoq" path="res://Sprites/frosty_2_walking_left.png" id="6_ql3jj"]
@@ -68,6 +69,54 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("DeadPlayer:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("DeadPlayer:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_4g3ev"]
@@ -134,8 +183,74 @@ tracks/4/keys = {
 "values": [ExtResource("2_oufo7"), ExtResource("6_ql3jj")]
 }
 
+[sub_resource type="Animation" id="Animation_blvhl"]
+resource_name = "DeathAnimation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DeadPlayer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DeadPlayer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("States/Dying")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"die"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_e3sy3"]
 _data = {
+"DeathAnimation": SubResource("Animation_blvhl"),
 "RESET": SubResource("Animation_xxnax"),
 "Transition_3-2": SubResource("Animation_4g3ev")
 }
@@ -690,6 +805,11 @@ script = ExtResource("4_olyv1")
 position = Vector2(0, 64)
 scale = Vector2(0.96, 1)
 shape = SubResource("RectangleShape2D_x6jwn")
+
+[node name="DeadPlayer" parent="." instance=ExtResource("6_6qx1h")]
+visible = false
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(2, 2)
 
 [node name="StartupAnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Level3/Idle"

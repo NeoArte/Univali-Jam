@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cywefjsblli8s"]
+
+[ext_resource type="Texture2D" uid="uid://di1kvnvhtld3o" path="res://Sprites/FROSTY MORREU.png" id="1_aoeor"]
+
+[node name="DeadPlayer" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-21, 36)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-8, -43)
+scale = Vector2(0.615625, 0.615625)
+texture = ExtResource("1_aoeor")
