@@ -1,0 +1,33 @@
+[gd_resource type="TileSet" load_steps=10 format=3 uid="uid://d0l26hebn8o7n"]
+
+[ext_resource type="Texture2D" uid="uid://bfijxqtxp5gsx" path="res://Untitled 05-20-2023 12-21-26 (2).png" id="1_3p8x7"]
+[ext_resource type="PackedScene" uid="uid://b0h88knnel0ac" path="res://Scenes/Tiles/sized_wall_1.tscn" id="2_4y70v"]
+[ext_resource type="PackedScene" uid="uid://dpgwl5x0o53c3" path="res://Scenes/Tiles/sized_wall_2.tscn" id="3_ggwo6"]
+[ext_resource type="PackedScene" uid="uid://duak6pvrlgbds" path="res://Scenes/Tiles/grass_tile.tscn" id="4_22bey"]
+[ext_resource type="PackedScene" uid="uid://c2g3alcyiu0r1" path="res://Scenes/Tiles/parede.tscn" id="5_mblm2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dsrcv"]
+texture = ExtResource("1_3p8x7")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+0:0/0/y_sort_origin = 111
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_if6yt"]
+resource_name = "SizedWall"
+scenes/2/scene = ExtResource("2_4y70v")
+scenes/3/scene = ExtResource("3_ggwo6")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_545ot"]
+resource_name = "GrassTile"
+scenes/0/scene = ExtResource("4_22bey")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_5uqxs"]
+resource_name = "Wall"
+scenes/1/scene = ExtResource("5_mblm2")
+
+[resource]
+tile_size = Vector2i(256, 152)
+sources/0 = SubResource("TileSetAtlasSource_dsrcv")
+sources/2 = SubResource("TileSetScenesCollectionSource_545ot")
+sources/1 = SubResource("TileSetScenesCollectionSource_if6yt")
+sources/3 = SubResource("TileSetScenesCollectionSource_5uqxs")

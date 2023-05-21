@@ -6,7 +6,7 @@ func _ready():
 	pass # Replace with function body.
 
 func run(player: PlayerClass, delta: float):
-	var motion = player.direction * 400 * delta
+	var motion = player.direction * player.speed * delta
 	var col_info = player.move_and_collide(motion * 3, true)
 	print(col_info)
 	if col_info:

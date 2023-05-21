@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name PlayerClass
 
-const SPEED = 300.0
+@export var speed = 500.0
 
 @export var state = 1
 @export var level = 3
