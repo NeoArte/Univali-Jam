@@ -17,7 +17,7 @@ func _on_body_entered(body: PlayerClass):
 	var next_level_res = load('res://Animations/Level1.res')
 	print('BATATATATATATATATATATATA')
 	var next_level = s.instantiate()
-	print(body.direction)
+	print(next_level)
 	body.direction = Vector2.ZERO
 	body.state = 3
 	root.add_child(next_level)

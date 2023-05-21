@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://d0l26hebn8o7n" path="res://Tileset.tres" id="1_of2b2"]
 [ext_resource type="PackedScene" uid="uid://boj2ke5y667io" path="res://Scenes/player.tscn" id="2_03b8p"]
-[ext_resource type="PackedScene" uid="uid://e6h7xk8bi6ek" path="res://Scenes/Tiles/igloo_tile.tscn" id="3_utxtc"]
+[ext_resource type="PackedScene" uid="uid://bt1byrockbr55" path="res://Scenes/Tiles/igloo_tile.tscn" id="3_utxtc"]
 
 [node name="Level" type="Node2D"]
 
@@ -30,7 +30,6 @@ layer_0/tile_data = PackedInt32Array(-327684, 3, 65536, -327678, 3, 65536, 65537
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -60)
-current = true
 zoom = Vector2(0.15, 0.15)
 
 [node name="igloo" parent="." instance=ExtResource("3_utxtc")]

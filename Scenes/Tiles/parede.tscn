@@ -9,22 +9,21 @@ size = Vector2(256, 144)
 modulate = Color(0.686275, 0.72549, 0.721569, 1)
 position = Vector2(0, -82)
 collision_layer = 4
-collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 63)
 shape = SubResource("RectangleShape2D_bkt2f")
 
 [node name="lower_sprite" type="Sprite2D" parent="."]
-position = Vector2(0, 42)
 z_index = -1
+position = Vector2(0, 42)
 texture = ExtResource("1_01ypj")
 region_enabled = true
 region_rect = Rect2(0, 72, 257, 185)
 
 [node name="upper_spite" type="Sprite2D" parent="."]
-position = Vector2(0, -86)
 z_index = 2
+position = Vector2(0, -86)
 texture = ExtResource("1_01ypj")
 region_enabled = true
 region_rect = Rect2(0, 0, 257, 72)

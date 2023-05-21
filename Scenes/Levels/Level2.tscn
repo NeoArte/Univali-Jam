@@ -39,5 +39,4 @@ layer_0/tile_data = PackedInt32Array(-4, 1, 131072, 131069, 3, 65536, 196603, 3,
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -60)
-current = true
 zoom = Vector2(0.15, 0.15)

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bfijxqtxp5gsx" path="res://Untitled 05-20-2023 12-21-26 (2).png" id="1_3p8x7"]
 [ext_resource type="PackedScene" uid="uid://b0h88knnel0ac" path="res://Scenes/Tiles/sized_wall_1.tscn" id="2_4y70v"]
-[ext_resource type="PackedScene" uid="uid://dpgwl5x0o53c3" path="res://Scenes/Tiles/sized_wall_2.tscn" id="3_ggwo6"]
+[ext_resource type="PackedScene" path="res://Scenes/Tiles/sized_wall_2.tscn" id="3_ggwo6"]
 [ext_resource type="PackedScene" uid="uid://duak6pvrlgbds" path="res://Scenes/Tiles/grass_tile.tscn" id="4_22bey"]
 [ext_resource type="PackedScene" uid="uid://c2g3alcyiu0r1" path="res://Scenes/Tiles/parede.tscn" id="5_mblm2"]
 
