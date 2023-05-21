@@ -22,13 +22,21 @@ var direction = Vector2(0, 0)
 
 @onready var col_audio_player = get_node('CollisionAudioPlayer')
 
+@onready var spr: Sprite2D = get_node('Sprite2D')
+
+var stay_idle = false
+
 func _init():
 	pass
+
 func add_level():
 	level += 1 if level <= 3 else 0
 
 func remove_level():
 	level -= 1
+
+func stop_idle():
+	stay_idle = false
 
 func _physics_process(delta):
 	if level <= 0:

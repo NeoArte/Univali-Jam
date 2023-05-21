@@ -8,8 +8,7 @@ func _ready():
 func run(player: PlayerClass):
 	# print('IDLE')
 	
-	if player.anim_player.get_current_animation() == 'Transition_3-2':
-		
+	if player.stay_idle:
 		return
 	
 	player.position = player.position.snapped(Vector2(256/2, 152))

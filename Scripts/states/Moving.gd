@@ -9,7 +9,7 @@ func run(player: PlayerClass, delta: float):
 	if not player.audio.playing:
 		player.audio.play()
 	var motion = player.direction * player.speed * delta
-	var col_info = player.move_and_collide(motion * 3, true)
+	var col_info = player.move_and_collide(motion, true)
 	if col_info:
 		player.audio.stop()
 		if not player.col_audio_player.playing:
