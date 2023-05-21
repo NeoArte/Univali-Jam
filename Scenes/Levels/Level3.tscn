@@ -8,6 +8,10 @@
 [node name="Level" type="Node2D"]
 y_sort_enabled = true
 
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -60)
+zoom = Vector2(0.15, 0.15)
+
 [node name="BackgroundTileMap" type="TileMap" parent="."]
 z_index = -2
 y_sort_enabled = true
@@ -20,7 +24,7 @@ layer_0/tile_data = PackedInt32Array(196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 1
 tile_set = ExtResource("1_of2b2")
 format = 2
 layer_0/y_sort_enabled = true
-layer_0/tile_data = PackedInt32Array(-65540, 3, 65536, 262143, 3, 65536, -458747, 1, 196608, -524283, 3, 65536, -327688, 3, 65536, -458754, 3, 65536, -393212, 3, 65536, -327676, 3, 65536, -262140, 3, 65536, -196603, 3, 65536, 65540, 1, 196608, -458749, 3, 65536, -327685, 3, 65536, 262148, 3, 65536, -131067, 3, 65536, -65530, 3, 65536, -65529, 3, 65536, -458748, 3, 65536)
+layer_0/tile_data = PackedInt32Array(-65540, 3, 65536, 262143, 3, 65536, -458747, 1, 196608, -327688, 3, 65536, -458754, 3, 65536, -393212, 3, 65536, -327676, 3, 65536, -262140, 3, 65536, -196603, 3, 65536, 65540, 1, 196608, -458749, 3, 65536, -327685, 3, 65536, 262148, 3, 65536, -131067, 3, 65536, -65530, 3, 65536, -65529, 3, 65536, -458748, 3, 65536)
 
 [node name="LimitsTileMap" type="TileMap" parent="."]
 position = Vector2(0, 9)
@@ -32,23 +36,11 @@ layer_0/tile_data = PackedInt32Array(589816, 3, 65536, 589817, 3, 65536, 589818,
 position = Vector2(-900, 918)
 level = 3
 
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, -60)
-current = true
-zoom = Vector2(0.15, 0.15)
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_v4sac")
+volume_db = -15.0
 autoplay = true
 
 [node name="igloo" parent="." instance=ExtResource("4_3ifmx")]
 position = Vector2(1797, -1175)
 next_level_path = "res://Screens/main_screen.tscn"
-
-[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@26394" to="BackgroundTileMap/@GrassTile@26394" method="_on_body_entered"]
-[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@26394" to="BackgroundTileMap/@GrassTile@26394" method="_on_body_exited"]
-[connection signal="body_entered" from="BackgroundTileMap/@snow_tile@26395" to="BackgroundTileMap/@snow_tile@26395" method="_on_body_entered"]
-[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@26396" to="BackgroundTileMap/@GrassTile@26396" method="_on_body_entered"]
-[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@26396" to="BackgroundTileMap/@GrassTile@26396" method="_on_body_exited"]
-[connection signal="body_entered" from="ObjectsTileMap/@SizedWall@26397" to="ObjectsTileMap/@SizedWall@26397" method="_on_body_entered"]
-[connection signal="body_entered" from="ObjectsTileMap/@SizedWall@26405" to="ObjectsTileMap/@SizedWall@26405" method="_on_body_entered"]

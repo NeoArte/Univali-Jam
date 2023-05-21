@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Scripts/states/Moving.gd" id="2_oaciu"]
 [ext_resource type="Texture2D" uid="uid://boyyq4nenkkx7" path="res://Sprites/frosty_3_startup_left.png" id="2_oufo7"]
 [ext_resource type="Script" path="res://Scripts/states/Dying.gd" id="4_olyv1"]
-[ext_resource type="PackedScene" path="res://morreu.tscn" id="6_6qx1h"]
+[ext_resource type="PackedScene" uid="uid://cywefjsblli8s" path="res://morreu.tscn" id="6_6qx1h"]
 [ext_resource type="AnimationLibrary" uid="uid://bf6irvi5fcw12" path="res://Animations/Level3.res" id="6_8vi24"]
 [ext_resource type="AnimationLibrary" uid="uid://22pw2jynf5j8" path="res://Animations/Level1.res" id="6_b0dm8"]
 [ext_resource type="Texture2D" uid="uid://b6aejy48wnmoq" path="res://Sprites/frosty_2_walking_left.png" id="6_ql3jj"]

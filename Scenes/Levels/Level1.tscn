@@ -8,6 +8,10 @@
 [node name="Level" type="Node2D"]
 y_sort_enabled = true
 
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -60)
+zoom = Vector2(0.15, 0.15)
+
 [node name="BackgroundTileMap" type="TileMap" parent="."]
 z_index = -2
 y_sort_enabled = true
@@ -32,13 +36,9 @@ layer_0/tile_data = PackedInt32Array(589816, 3, 65536, 589817, 3, 65536, 589818,
 position = Vector2(-900, 918)
 level = 3
 
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, -60)
-current = true
-zoom = Vector2(0.15, 0.15)
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_v4sac")
+volume_db = -15.0
 autoplay = true
 
 [node name="igloo" parent="." instance=ExtResource("3_utxtc")]
