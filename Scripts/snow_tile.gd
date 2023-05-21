@@ -8,7 +8,11 @@ func _ready():
 
 func _on_body_entered(body: PlayerClass):
 	var tween = get_tree().create_tween()
-	tween.tween_property(body, "scale", Vector2(), 0.5).set_trans(Tween.TRANS_BOUNCE)	
-	tween.tween_property(body, "scale", Vector2(1,1), 0.5).set_trans(Tween.TRANS_BOUNCE)
-	body.remove_level()	
+	print(body.spr.scale)
+	body.add_level()
+	
+	tween.tween_property(body.spr, "scale", Vector2(body.spr.scale.x,2), 0.5).set_trans(Tween.TRANS_BOUNCE)
+	tween.tween_property(body, "state", 1, 0).set_trans(Tween.TRANS_BOUNCE)
+	tween.tween_property(body.spr, "scale", Vector2(body.spr.scale.x,1), 0.5).set_trans(Tween.TRANS_BOUNCE)
+	tween.tween_callback(body.stop_idle)
 
