@@ -7,6 +7,10 @@ func _ready():
 
 
 func _on_body_entered(body: PlayerClass):
+	if body.level == 3:
+		body.state = 1
+		body.direction = Vector2.ZERO
+		return
 	var tween = get_tree().create_tween()
 	print(body.spr.scale)
 	body.add_level()

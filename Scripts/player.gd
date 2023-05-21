@@ -30,7 +30,7 @@ func _init():
 	pass
 
 func add_level():
-	level += 1 if level <= 3 else 0
+	level += 1 if level < 3 else 0
 
 func remove_level():
 	level -= 1
