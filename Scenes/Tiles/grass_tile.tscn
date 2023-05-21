@@ -7,6 +7,7 @@
 size = Vector2(256, 160)
 
 [node name="GrassTile" type="Area2D"]
+y_sort_enabled = true
 collision_layer = 0
 script = ExtResource("1_cf7ky")
 

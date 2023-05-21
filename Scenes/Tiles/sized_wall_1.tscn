@@ -9,6 +9,7 @@ size = Vector2(254, 286)
 
 [node name="SizedWall" type="Area2D"]
 position = Vector2(0, -95)
+y_sort_enabled = true
 script = ExtResource("1_6b0fq")
 nivel_req = 1.0
 
