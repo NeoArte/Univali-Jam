@@ -30,6 +30,7 @@ layer_0/tile_data = PackedInt32Array(-327684, 3, 65536, -327678, 3, 65536, 65537
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -60)
+current = true
 zoom = Vector2(0.15, 0.15)
 
 [node name="igloo" parent="." instance=ExtResource("3_utxtc")]
