@@ -1,0 +1,62 @@
+[gd_scene load_steps=12 format=3 uid="uid://d34hyxnrqegij"]
+
+[ext_resource type="Texture2D" uid="uid://bfijxqtxp5gsx" path="res://Untitled 05-20-2023 12-21-26 (2).png" id="1_1sjf7"]
+[ext_resource type="PackedScene" uid="uid://b0h88knnel0ac" path="res://Scenes/Tiles/sized_wall_1.tscn" id="2_4ktkm"]
+[ext_resource type="PackedScene" uid="uid://duak6pvrlgbds" path="res://Scenes/Tiles/grass_tile.tscn" id="2_xwfa5"]
+[ext_resource type="PackedScene" uid="uid://boj2ke5y667io" path="res://Scenes/player.tscn" id="3_kwtja"]
+[ext_resource type="PackedScene" uid="uid://dpgwl5x0o53c3" path="res://Scenes/Tiles/sized_wall_2.tscn" id="3_oheap"]
+[ext_resource type="PackedScene" uid="uid://c2g3alcyiu0r1" path="res://Scenes/Tiles/parede.tscn" id="6_wxdkt"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dsrcv"]
+texture = ExtResource("1_1sjf7")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_if6yt"]
+resource_name = "SizedWall"
+scenes/2/scene = ExtResource("2_4ktkm")
+scenes/3/scene = ExtResource("3_oheap")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_545ot"]
+resource_name = "GrassTile"
+scenes/0/scene = ExtResource("2_xwfa5")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_5uqxs"]
+resource_name = "Wall"
+scenes/1/scene = ExtResource("6_wxdkt")
+
+[sub_resource type="TileSet" id="TileSet_yng5n"]
+tile_size = Vector2i(256, 152)
+sources/0 = SubResource("TileSetAtlasSource_dsrcv")
+sources/2 = SubResource("TileSetScenesCollectionSource_545ot")
+sources/1 = SubResource("TileSetScenesCollectionSource_if6yt")
+sources/3 = SubResource("TileSetScenesCollectionSource_5uqxs")
+
+[node name="LevelBase" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+modulate = Color(0.933333, 1, 1, 1)
+z_as_relative = false
+y_sort_enabled = true
+tile_set = SubResource("TileSet_yng5n")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(-8, 0, 0, -7, 0, 0, 65529, 0, 0, 65528, 0, 0, -196612, 0, 0, -131076, 0, 0, -65540, 0, 0, -4, 0, 0, 65532, 0, 0, 131068, 0, 0, 196604, 0, 0, 262140, 0, 0, -196611, 0, 0, -131075, 0, 0, -65539, 0, 0, -3, 0, 0, 131069, 0, 0, 196605, 0, 0, 262141, 0, 0, -196610, 0, 0, -131074, 0, 0, -65538, 0, 0, -2, 0, 0, 65534, 0, 0, 131070, 0, 0, 196606, 0, 0, 262142, 0, 0, -196609, 0, 0, -131073, 0, 0, -65537, 0, 0, -1, 0, 0, 65535, 0, 0, 131071, 0, 0, 196607, 0, 0, 262143, 0, 0, -262144, 0, 0, -196608, 0, 0, -131072, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, -262143, 0, 0, -196607, 0, 0, -131071, 0, 0, -65535, 0, 0, 1, 0, 0, 65537, 0, 0, 131073, 0, 0, 196609, 0, 0, -262142, 0, 0, -196606, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 131074, 0, 0, 196610, 0, 0, -262141, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, 65539, 0, 0, 131075, 0, 0, 196611, 0, 0, 0, 0, 0, -65536, 0, 0, 65533, 2, 0)
+
+[node name="Player" parent="." instance=ExtResource("3_kwtja")]
+position = Vector2(-139, -32)
+level = 1
+
+[node name="TileMapObjects" type="TileMap" parent="."]
+modulate = Color(0.933333, 1, 1, 1)
+z_as_relative = false
+y_sort_enabled = true
+tile_set = SubResource("TileSet_yng5n")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(196610, 0, 0, -8, 0, 0, -7, 0, 0, 65529, 0, 0, 65528, 0, 0, 1, 1, 131072, 65533, 1, 196608)
+
+[connection signal="body_entered" from="TileMap/GrassTile" to="TileMap/GrassTile" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/GrassTile" to="TileMap/GrassTile" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMapObjects/SizedWall" to="TileMapObjects/SizedWall" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapObjects/@SizedWall@72084" to="TileMapObjects/@SizedWall@72084" method="_on_body_entered"]

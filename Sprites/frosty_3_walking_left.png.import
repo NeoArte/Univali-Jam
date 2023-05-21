@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x0yxdlgylgqd"
-path="res://.godot/imported/Untitled 05-20-2023 12-21-26 (2).png-8e915a9daa00a9599bd1e5a2635ec993.ctex"
+uid="uid://b5487rnj5w3ww"
+path="res://.godot/imported/frosty_3_walking_left.png-25081c49d266d2c9f958a893c3b8956d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Untitled 05-20-2023 12-21-26 (2).png"
-dest_files=["res://.godot/imported/Untitled 05-20-2023 12-21-26 (2).png-8e915a9daa00a9599bd1e5a2635ec993.ctex"]
+source_file="res://Sprites/frosty_3_walking_left.png"
+dest_files=["res://.godot/imported/frosty_3_walking_left.png-25081c49d266d2c9f958a893c3b8956d.ctex"]
 
 [params]
 

@@ -6,6 +6,9 @@ func _ready():
 	pass # Replace with function body.
 
 
-func _on_body_entered(body: Player):
+func _on_body_entered(body: PlayerClass):
+	pass
+
+
+func _on_body_exited(body: PlayerClass):
 	body.remove_level()
-	

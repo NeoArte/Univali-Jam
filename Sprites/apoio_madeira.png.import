@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x0yxdlgylgqd"
-path="res://.godot/imported/Untitled 05-20-2023 12-21-26 (2).png-8e915a9daa00a9599bd1e5a2635ec993.ctex"
+uid="uid://o1si40q70mir"
+path="res://.godot/imported/apoio_madeira.png-6f8ab36078ed822279aa5c491c599193.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Untitled 05-20-2023 12-21-26 (2).png"
-dest_files=["res://.godot/imported/Untitled 05-20-2023 12-21-26 (2).png-8e915a9daa00a9599bd1e5a2635ec993.ctex"]
+source_file="res://Sprites/apoio_madeira.png"
+dest_files=["res://.godot/imported/apoio_madeira.png-6f8ab36078ed822279aa5c491c599193.ctex"]
 
 [params]
 

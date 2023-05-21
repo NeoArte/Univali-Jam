@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://i0dp80ds1e2k"]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="PackedScene" uid="uid://boj2ke5y667io" path="res://Scenes/player.tscn" id="1_adno0"]
-[ext_resource type="PackedScene" uid="uid://c2g3alcyiu0r1" path="res://Scenes/parede.tscn" id="2_dav54"]
+[ext_resource type="PackedScene" uid="uid://c2g3alcyiu0r1" path="res://Scenes/Tiles/parede.tscn" id="2_dav54"]
 
 [node name="Node2D" type="Node2D"]
 

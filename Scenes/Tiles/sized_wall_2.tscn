@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpgwl5x0o53c3"]
+
+[ext_resource type="Script" path="res://parede_2.gd" id="1_4smqu"]
+[ext_resource type="Texture2D" uid="uid://bfijxqtxp5gsx" path="res://Untitled 05-20-2023 12-21-26 (2).png" id="2_dbuei"]
+[ext_resource type="Texture2D" uid="uid://dk7m3n11g7qlq" path="res://Sprites/apoio_madeira_ponta.png" id="3_uwjc3"]
+[ext_resource type="Texture2D" uid="uid://o1si40q70mir" path="res://Sprites/apoio_madeira.png" id="4_erqgq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q75x8"]
+size = Vector2(254, 320)
+
+[node name="SizedWall" type="Area2D"]
+modulate = Color(0.686275, 0.72549, 0.721569, 1)
+position = Vector2(0, -187)
+script = ExtResource("1_4smqu")
+nivel_req = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_q75x8")
+
+[node name="SpriteTarget2" type="Node2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="SpriteTarget2"]
+position = Vector2(0, -81)
+texture = ExtResource("2_dbuei")
+
+[node name="Sprite2D3" type="Sprite2D" parent="SpriteTarget2"]
+position = Vector2(0, 59)
+texture = ExtResource("4_erqgq")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteTarget2"]
+texture = ExtResource("3_uwjc3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

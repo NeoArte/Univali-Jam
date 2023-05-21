@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x0yxdlgylgqd"
-path="res://.godot/imported/Untitled 05-20-2023 12-21-26 (2).png-8e915a9daa00a9599bd1e5a2635ec993.ctex"
+uid="uid://bfijxqtxp5gsx"
+path="res://.godot/imported/Untitled 05-20-2023 12-21-26 (2).png-f59b40191a794ce23b1360b5b0aa2a4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Untitled 05-20-2023 12-21-26 (2).png"
-dest_files=["res://.godot/imported/Untitled 05-20-2023 12-21-26 (2).png-8e915a9daa00a9599bd1e5a2635ec993.ctex"]
+source_file="res://Untitled 05-20-2023 12-21-26 (2).png"
+dest_files=["res://.godot/imported/Untitled 05-20-2023 12-21-26 (2).png-f59b40191a794ce23b1360b5b0aa2a4a.ctex"]
 
 [params]
 
