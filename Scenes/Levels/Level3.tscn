@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dcsuppnexgi5"]
 
 [ext_resource type="TileSet" uid="uid://d0l26hebn8o7n" path="res://Tileset.tres" id="1_of2b2"]
-[ext_resource type="PackedScene" uid="uid://boj2ke5y667io" path="res://Scenes/player.tscn" id="2_03b8p"]
+[ext_resource type="PackedScene" uid="uid://03xwa6ptemke" path="res://Scenes/player.tscn" id="2_03b8p"]
 [ext_resource type="AudioStream" uid="uid://7152ur1uwe8s" path="res://Music/main.mp3" id="3_v4sac"]
 [ext_resource type="PackedScene" uid="uid://bt1byrockbr55" path="res://Scenes/Tiles/igloo_tile.tscn" id="4_3ifmx"]
 
@@ -45,10 +45,10 @@ autoplay = true
 position = Vector2(1797, -1175)
 next_level_path = "res://Screens/main_screen.tscn"
 
-[connection signal="body_entered" from="BackgroundTileMap/GrassTile" to="BackgroundTileMap/GrassTile" method="_on_body_entered"]
-[connection signal="body_exited" from="BackgroundTileMap/GrassTile" to="BackgroundTileMap/GrassTile" method="_on_body_exited"]
-[connection signal="body_entered" from="BackgroundTileMap/snow_tile" to="BackgroundTileMap/snow_tile" method="_on_body_entered"]
-[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@58185" to="BackgroundTileMap/@GrassTile@58185" method="_on_body_entered"]
-[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@58185" to="BackgroundTileMap/@GrassTile@58185" method="_on_body_exited"]
-[connection signal="body_entered" from="ObjectsTileMap/SizedWall" to="ObjectsTileMap/SizedWall" method="_on_body_entered"]
-[connection signal="body_entered" from="ObjectsTileMap/@SizedWall@58175" to="ObjectsTileMap/@SizedWall@58175" method="_on_body_entered"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@26394" to="BackgroundTileMap/@GrassTile@26394" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@26394" to="BackgroundTileMap/@GrassTile@26394" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@snow_tile@26395" to="BackgroundTileMap/@snow_tile@26395" method="_on_body_entered"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@26396" to="BackgroundTileMap/@GrassTile@26396" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@26396" to="BackgroundTileMap/@GrassTile@26396" method="_on_body_exited"]
+[connection signal="body_entered" from="ObjectsTileMap/@SizedWall@26397" to="ObjectsTileMap/@SizedWall@26397" method="_on_body_entered"]
+[connection signal="body_entered" from="ObjectsTileMap/@SizedWall@26405" to="ObjectsTileMap/@SizedWall@26405" method="_on_body_entered"]

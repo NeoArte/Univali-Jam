@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxe0bg7266dd5"]
 
 [ext_resource type="TileSet" uid="uid://d0l26hebn8o7n" path="res://Tileset.tres" id="1_of2b2"]
-[ext_resource type="PackedScene" uid="uid://boj2ke5y667io" path="res://Scenes/player.tscn" id="2_03b8p"]
+[ext_resource type="PackedScene" uid="uid://03xwa6ptemke" path="res://Scenes/player.tscn" id="2_03b8p"]
 [ext_resource type="AudioStream" uid="uid://7152ur1uwe8s" path="res://Music/main.mp3" id="3_v4sac"]
 
 [node name="Level" type="Node2D"]

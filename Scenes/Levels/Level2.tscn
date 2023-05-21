@@ -40,8 +40,48 @@ next_level_path = "res://Scenes/Levels/Level3.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -60)
+current = true
 zoom = Vector2(0.15, 0.15)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_v4sac")
 autoplay = true
+
+[connection signal="body_entered" from="BackgroundTileMap/GrassTile" to="BackgroundTileMap/GrassTile" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/GrassTile" to="BackgroundTileMap/GrassTile" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/snow_tile" to="BackgroundTileMap/snow_tile" method="_on_body_entered"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27140" to="BackgroundTileMap/@GrassTile@27140" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27140" to="BackgroundTileMap/@GrassTile@27140" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27141" to="BackgroundTileMap/@GrassTile@27141" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27141" to="BackgroundTileMap/@GrassTile@27141" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27142" to="BackgroundTileMap/@GrassTile@27142" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27142" to="BackgroundTileMap/@GrassTile@27142" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27143" to="BackgroundTileMap/@GrassTile@27143" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27143" to="BackgroundTileMap/@GrassTile@27143" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27144" to="BackgroundTileMap/@GrassTile@27144" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27144" to="BackgroundTileMap/@GrassTile@27144" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27145" to="BackgroundTileMap/@GrassTile@27145" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27145" to="BackgroundTileMap/@GrassTile@27145" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27146" to="BackgroundTileMap/@GrassTile@27146" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27146" to="BackgroundTileMap/@GrassTile@27146" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27147" to="BackgroundTileMap/@GrassTile@27147" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27147" to="BackgroundTileMap/@GrassTile@27147" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27148" to="BackgroundTileMap/@GrassTile@27148" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27148" to="BackgroundTileMap/@GrassTile@27148" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27149" to="BackgroundTileMap/@GrassTile@27149" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27149" to="BackgroundTileMap/@GrassTile@27149" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27150" to="BackgroundTileMap/@GrassTile@27150" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27150" to="BackgroundTileMap/@GrassTile@27150" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27151" to="BackgroundTileMap/@GrassTile@27151" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27151" to="BackgroundTileMap/@GrassTile@27151" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27152" to="BackgroundTileMap/@GrassTile@27152" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27152" to="BackgroundTileMap/@GrassTile@27152" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27153" to="BackgroundTileMap/@GrassTile@27153" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27153" to="BackgroundTileMap/@GrassTile@27153" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27154" to="BackgroundTileMap/@GrassTile@27154" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27154" to="BackgroundTileMap/@GrassTile@27154" method="_on_body_exited"]
+[connection signal="body_entered" from="BackgroundTileMap/@GrassTile@27155" to="BackgroundTileMap/@GrassTile@27155" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/@GrassTile@27155" to="BackgroundTileMap/@GrassTile@27155" method="_on_body_exited"]
+[connection signal="body_entered" from="ObjectsTileMap/SizedWall" to="ObjectsTileMap/SizedWall" method="_on_body_entered"]
+[connection signal="body_entered" from="ObjectsTileMap/@SizedWall@27126" to="ObjectsTileMap/@SizedWall@27126" method="_on_body_entered"]
+[connection signal="body_entered" from="ObjectsTileMap/@SizedWall@27139" to="ObjectsTileMap/@SizedWall@27139" method="_on_body_entered"]

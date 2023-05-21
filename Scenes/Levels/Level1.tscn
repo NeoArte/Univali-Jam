@@ -34,6 +34,7 @@ level = 3
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -60)
+current = true
 zoom = Vector2(0.15, 0.15)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
