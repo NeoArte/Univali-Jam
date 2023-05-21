@@ -10,7 +10,6 @@ func run(player: PlayerClass, delta: float):
 		player.audio.play()
 	var motion = player.direction * player.speed * delta
 	var col_info = player.move_and_collide(motion * 3, true)
-	print(col_info)
 	if col_info:
 		player.audio.stop()
 		player.direction = Vector2.ZERO

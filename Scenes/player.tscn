@@ -672,7 +672,7 @@ level = 2
 position = Vector2(0, -97)
 scale = Vector2(-1, 1)
 texture = ExtResource("2_oufo7")
-hframes = 5
+hframes = 6
 
 [node name="States" type="Node" parent="."]
 

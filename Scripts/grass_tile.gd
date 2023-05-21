@@ -10,7 +10,7 @@ func _on_body_entered(body: PlayerClass):
 	var tween = get_tree().create_tween()
 	tween.tween_property(body, "scale", Vector2(), 0.5).set_trans(Tween.TRANS_BOUNCE)	
 	tween.tween_property(body, "scale", Vector2(1,1), 0.5).set_trans(Tween.TRANS_BOUNCE)
-	body.remove_level()	
+	body.remove_level()
 
 func _on_body_exited(body: PlayerClass):
 	pass

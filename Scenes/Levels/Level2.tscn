@@ -38,3 +38,7 @@ zoom = Vector2(0.15, 0.15)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_v4sac")
 autoplay = true
+
+[connection signal="body_entered" from="BackgroundTileMap/GrassTile" to="BackgroundTileMap/GrassTile" method="_on_body_entered"]
+[connection signal="body_exited" from="BackgroundTileMap/GrassTile" to="BackgroundTileMap/GrassTile" method="_on_body_exited"]
+[connection signal="body_entered" from="ObjectsTileMap/SizedWall" to="ObjectsTileMap/SizedWall" method="_on_body_entered"]
