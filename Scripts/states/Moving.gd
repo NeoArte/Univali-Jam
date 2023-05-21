@@ -12,6 +12,8 @@ func run(player: PlayerClass, delta: float):
 	var col_info = player.move_and_collide(motion * 3, true)
 	if col_info:
 		player.audio.stop()
+		if not player.col_audio_player.playing:
+			player.col_audio_player.play()
 		player.direction = Vector2.ZERO
 		player.state = 1
 		return

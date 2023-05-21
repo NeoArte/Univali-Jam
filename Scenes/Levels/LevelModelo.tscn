@@ -37,4 +37,3 @@ zoom = Vector2(0.15, 0.15)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_v4sac")
-autoplay = true

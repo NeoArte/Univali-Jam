@@ -20,6 +20,8 @@ var direction = Vector2(0, 0)
 @onready var startup_anim_player = get_node('StartupAnimationPlayer')
 @onready var anim_player = get_node('AnimationPlayer')
 
+@onready var col_audio_player = get_node('CollisionAudioPlayer')
+
 func _init():
 	pass
 func add_level():
