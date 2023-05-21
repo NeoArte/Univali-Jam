@@ -8,6 +8,8 @@ size = Vector2(256, 144)
 [node name="StaticBody2D" type="StaticBody2D"]
 modulate = Color(0.686275, 0.72549, 0.721569, 1)
 position = Vector2(0, -82)
+collision_layer = 4
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 63)
